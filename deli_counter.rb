@@ -9,10 +9,25 @@ def line(katz_deli)
       katz_deli.each_with_index do |name, index|
         string_1 << " #{index + 1}. #{name}"
       end
-      puts string_1
+      puts string_1 
     end
 end
-#retun value is string and the string is also puts-ed.
+#my original line method was a bit heavy/clunky
+=begin
+def line(katz_deli)
+  if katz_deli.empty?
+    puts "The line is currently empty."
+  else
+    string_1 = "The line is currently:"
+    cust_position = []
+      katz_deli.each_with_index do |name, index|
+        cust_position[index] = " #{index + 1}. #{name}"
+      end
+  puts string_1 + cust_position.join
+    string_1 + cust_position.join
+  end
+end
+=end
 
 
 def take_a_number(katz_deli, name)
@@ -30,7 +45,7 @@ def now_serving(katz_deli)
 end
 
 
-#formal solution is
+#formal solution is 
 =begin
 def line(deli)
   if deli.empty?
