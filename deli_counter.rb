@@ -9,10 +9,11 @@ def line(katz_deli)
       katz_deli.each_with_index do |name, index|
         string_1 << " #{index + 1}. #{name}"
       end
-      puts string_1 
+      puts string_1
     end
 end
-#my original line method was a bit heavy/clunky
+#my original line method was a bit heavy/clunky. we don't need to define a new array
+#simply shovel the "each_with_index string" onto the end of string_1
 =begin
 def line(katz_deli)
   if katz_deli.empty?
@@ -45,7 +46,7 @@ def now_serving(katz_deli)
 end
 
 
-#formal solution is 
+#formal solution is
 =begin
 def line(deli)
   if deli.empty?
